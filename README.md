@@ -33,7 +33,7 @@ Enfin, il doit pouvoir consulter l’historiques des produits qu’il a testé.
 
 ### Faciliter le travail de l’agent
 
-L’agent doit pouvoir gérer les produits disponibles en test. Pour chaque produit, il y ajoute son nom, sa description, sa valeur initiale, des photos ainsi que la quantité mise à disposition en test.
+L’agent doit pouvoir gérer les produits disponibles en test. Pour chaque produit, il y ajoute son nom, sa description, son prix initiale, des photos ainsi que la quantité mise à disposition en test.
 
 Il doit également pouvoir determiner quels testeurs sont inviter à consulter son catalogue de produit.
 
@@ -78,6 +78,6 @@ Enfin, il reçoit les avis rédigés par les testeurs et peut clôturer le test.
 ## Estimation de la taille des données
 
 - milliers de produits
-- dizaines d’agents
-- centaines de testeurs
-- centaines de tests
+- centaines d’agents
+- milliers de testeurs
+- milliers de tests

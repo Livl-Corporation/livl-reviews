@@ -1,7 +1,104 @@
 @startuml "Livl Reviews"
 
 skinparam roundcorner 10
+hide empty methods
+hide empty members
+
+class User {
+    username
+    email
+    password
+    signupDate
+    description
+    avatarUrl
+}
+
+class Agent extends User {
+    
+}
 
 
+class Reviewer extends User {
+    
+}
+
+class Invitation {
+    date
+    message
+}
+
+Agent "1" -- "*" Invitation : send
+Reviewer "1" -- "*" Invitation : receive
+
+enum RequestState {
+    Sent
+    Refused
+    Accepted
+    Ordered
+    Received
+    Reviewed
+    Message
+    Suceeded
+    Failed
+}
+
+Agent "1" -- "*" Condition
+
+class Request {
+    
+}
+
+class RequestEvent {
+    date
+    message
+}
+
+class Review {
+    note
+    title
+    medias
+    message
+    createdOn
+}
+
+Review "*" -- "1" Reviewer
+Request "1" -- "*" Review
+
+class Condition {
+    refundRate
+    refundMode
+    message
+    requirePictures
+    requireVideos
+}
+
+class Product {
+    name
+    description
+    price
+    pictures
+    availableQuantity
+    published
+    createdOn
+    link
+}
+
+Product "*" -- "1" Condition
+
+RequestEvent "*" -- "1" RequestState : is of type
+Reviewer "1" -- "*" Request : asked by
+Agent "1" -- "*" Request : asked to
+Request "1" -- "*" RequestEvent : contains events
+Request "*" -- "*" Product : concern
+Agent "1" -- "*" Product : manage
+
+class Subcription {
+    active
+    createdOn
+    disabledOn
+}
+
+Agent "1" -- "*" Subcription : followed by
+Reviewer "1" -- "*" Subcription : follow
 
 @enduml
