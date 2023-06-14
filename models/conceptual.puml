@@ -61,8 +61,8 @@ class Review {
     createdOn
 }
 
-Review "*" -- "1" Reviewer
-Request "1" -- "*" Review
+Review "*" -- "1" Reviewer : written by
+Request "1" -- "1" Review : review for
 
 class Condition {
     refundRate
@@ -83,13 +83,13 @@ class Product {
     link
 }
 
-Product "*" -- "1" Condition
+Product "*" -- "1" Condition : test condition
 
 RequestEvent "*" -- "1" RequestState : is of type
 Reviewer "1" -- "*" Request : asked by
 Agent "1" -- "*" Request : asked to
 Request "1" -- "*" RequestEvent : contains events
-Request "*" -- "*" Product : concern
+Request "*" -- "1" Product : concern
 Agent "1" -- "*" Product : manage
 
 class Subcription {
