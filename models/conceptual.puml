@@ -17,30 +17,13 @@ class Agent extends User {
     
 }
 
-
-class Reviewer extends User {
-    
-}
-
 class Invitation {
     date
     message
 }
 
 Agent "1" -- "*" Invitation : send
-Reviewer "1" -- "*" Invitation : receive
-
-enum RequestState {
-    Sent
-    Refused
-    Accepted
-    Ordered
-    Received
-    Reviewed
-    Message
-    Suceeded
-    Failed
-}
+User "1" -- "*" Invitation : receive
 
 Agent "1" -- "*" Condition
 
@@ -51,6 +34,7 @@ class Request {
 class RequestEvent {
     date
     message
+    state
 }
 
 class Review {
@@ -61,7 +45,7 @@ class Review {
     createdOn
 }
 
-Review "*" -- "1" Reviewer : written by
+Review "*" -- "1" User : written by
 Request "1" -- "1" Review : review for
 
 class Condition {
@@ -85,8 +69,7 @@ class Product {
 
 Product "*" -- "1" Condition : test condition
 
-RequestEvent "*" -- "1" RequestState : is of type
-Reviewer "1" -- "*" Request : asked by
+User "1" -- "*" Request : asked by
 Agent "1" -- "*" Request : asked to
 Request "1" -- "*" RequestEvent : contains events
 Request "*" -- "1" Product : concern
@@ -99,6 +82,6 @@ class Subcription {
 }
 
 Agent "1" -- "*" Subcription : followed by
-Reviewer "1" -- "*" Subcription : follow
+User "1" -- "*" Subcription : follow
 
 @enduml
