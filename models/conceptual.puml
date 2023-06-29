@@ -8,80 +8,86 @@ class User {
     username
     email
     password
-    signupDate
     description
     avatarUrl
-}
-
-class Agent extends User {
-    
+    role
+    createdOn
 }
 
 class Invitation {
-    date
+    createdOn
     message
 }
 
-Agent "1" -- "*" Invitation : send
-User "1" -- "*" Invitation : receive
-
-Agent "1" -- "*" Condition
+class Subcription {
+    active
+    disabledOn
+    createdOn
+}
 
 class Request {
-    
+    createdOn
 }
 
 class RequestEvent {
-    date
     message
     state
+    createdOn
 }
 
 class Review {
     note
     title
-    medias
     message
     createdOn
 }
 
-Review "*" -- "1" User : written by
-Request "1" -- "1" Review : review for
-
 class Condition {
+    name
     refundRate
     refundMode
     message
     requirePictures
     requireVideos
+    createdOn
 }
 
 class Product {
     name
     description
     price
-    pictures
     availableQuantity
     published
+    link    
     createdOn
-    link
 }
+
+class Media {
+    caption
+    url
+}
+
+Invitation "*" -- "1" User : sender
+Invitation "*" -- "1" User : recipient
+
+Subcription "*" -- "1" User : follower
+Subcription "*" -- "1" User : following
+
+Request "*" -- "1" Product : concern
+Request "*" -- "1" User : created by
+Request "*" -- "1" User : recipient
+
+RequestEvent "*" -- "1" Request : related request
+
+Review "*" -- "1" User : created by
+Review "0..1" -- "1" Request : review for
+
+Condition "*" -- "1" User : created by
 
 Product "*" -- "1" Condition : test condition
+Product "*" -- "1" User : created by
 
-User "1" -- "*" Request : asked by
-Agent "1" -- "*" Request : asked to
-Request "1" -- "*" RequestEvent : contains events
-Request "*" -- "1" Product : concern
-Agent "1" -- "*" Product : manage
-
-class Subcription {
-    active
-    createdOn
-    disabledOn
-}
-
-Agent "1" -- "*" Subcription : followed by
-User "1" -- "*" Subcription : follow
+Media "*" -- "1" Product : related to
+Media "*" -- "1" Review : related to
 
 @enduml
