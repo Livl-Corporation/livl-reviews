@@ -5,11 +5,11 @@
 
 ### **Conceptual diagram**
 
-- The main entities are represented by the "User", "Agent" and "Reviewer" classes. "Agent" and "Reviewer" inherit from the "User" class, reflecting their inheritance relationship in the context of the system.
+- Each `User` is a basic tester, and then there are special Users who are `Agent`s and have additional rights to post products.
 
 - The "Invitation" entity is used to represent invitations sent by agents and received by reviewers. The relationship between "Agent" and "Invitation" is a one-to-many relationship, as is the relationship between "Reviewer" and "Invitation".
 
-- The "RequestState" enumeration represents the various possible states of a test request. This enumeration is associated with the "RequestEvent" class, which records the events associated with a test request.
+- "RequestEvent" class records the events associated with a test request.
 
 - The "Review" and "Product" entities represent, respectively, the reviews written by testers and the products available for testing. There is a one-to-many relationship between "Product" and "Condition", where each product is associated with a specific test condition.
 
