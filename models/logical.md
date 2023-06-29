@@ -18,6 +18,6 @@
 
 **RequestEvent**(<u>requestEventId</u>, date, message, requestId<sub>FK</sub>, requestStateId<sub>FK</sub>)
 
-**Review**(<u>reviewId</u>, note, title, medias, message, createdOn, createBy<sub>FK</sub>)
+**Review**(<u>reviewId</u>, note, title, medias, message, createdOn, createdBy<sub>FK</sub>)
 
 **Subscription**(<u>subscriptionId</u>, active, createdOn, disabledOn, agentID<sub>FK</sub>, reviewerId<sub>FK</sub>) 
