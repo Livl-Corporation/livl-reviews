@@ -20,5 +20,5 @@ VALUES
     (@reviewId, 5)
     (@reviewId, 6)
 
-INSERT INTO RequestEvent (message, state, createdOn, requestId, createdBy)
-VALUES ("J'ai posté mon commentaire, merci beaucoup !", "reviewed", NOW(), 3, 3);
+INSERT INTO RequestEvent (message, state, requestId, createdBy)
+VALUES ("J'ai posté mon commentaire, merci beaucoup !", "reviewed", 3, 3);

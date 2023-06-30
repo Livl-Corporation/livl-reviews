@@ -11,8 +11,8 @@ CREATE PROCEDURE CreateNewProduct
 AS
 BEGIN
     -- Insert the new product
-    INSERT INTO Product (name, description, price, availableQuantity, published, link, conditionId, createdBy, createdOn)
-    VALUES (@name, @description, @price, @availableQuantity, @published, @link, @conditionId, @createdBy, NOW());
+    INSERT INTO Product (name, description, price, availableQuantity, published, link, conditionId, createdBy)
+    VALUES (@name, @description, @price, @availableQuantity, @published, @link, @conditionId, @createdBy);
 
     -- Get the last inserted product ID
     SET @productId = SCOPE_IDENTITY();

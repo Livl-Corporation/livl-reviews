@@ -9,8 +9,8 @@ AS
 BEGIN
     SET NOCOUNT ON;
 
-    INSERT INTO Review (note, title, message, createdOn, createdBy, relatedTo)
-    VALUES (@note, @title, @message, NOW(), @createdBy, @relatedTo);
+    INSERT INTO Review (note, title, message, createdBy, relatedTo)
+    VALUES (@note, @title, @message, @createdBy, @relatedTo);
 
     SET @reviewId = SCOPE_IDENTITY();
 END

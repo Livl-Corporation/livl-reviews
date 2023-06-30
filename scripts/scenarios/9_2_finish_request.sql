@@ -1,2 +1,2 @@
-INSERT INTO RequestEvent (message, state, createdOn, requestId, createdBy)
-VALUES ("Ce fut un plaisir de collaborer avec vous ! J'espère vous revoit bientôt !", "FINISHED", NOW(), 3, 3);
+INSERT INTO RequestEvent (message, state, requestId, createdBy)
+VALUES ("Ce fut un plaisir de collaborer avec vous ! J'espère vous revoit bientôt !", "FINISHED", 3, 3);
