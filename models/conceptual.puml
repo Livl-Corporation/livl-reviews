@@ -17,6 +17,7 @@ class User {
 class Invitation {
     createdOn
     message
+    email
 }
 
 class Subcription {
@@ -67,8 +68,7 @@ class Media {
     url
 }
 
-Invitation "*" -- "1" User : sender
-Invitation "*" -- "1" User : recipient
+Invitation "*" -- "1" User : created by
 
 Subcription "*" -- "1" User : follower
 Subcription "*" -- "1" User : following
@@ -78,6 +78,7 @@ Request "*" -- "1" User : created by
 Request "*" -- "1" User : recipient
 
 RequestEvent "*" -- "1" Request : related request
+RequestEvent "*" -- "1" User : created by
 
 Review "*" -- "1" User : created by
 Review "0..1" -- "1" Request : review for

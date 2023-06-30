@@ -53,7 +53,8 @@
     message, 
     state, 
     createdOn,
-    requestId<sub>FK</sub>)
+    requestId<sub>FK</sub>,
+    createdBy<sub>FK</sub>)
 
 **Review**(
     <u>reviewId</u>, 
@@ -61,6 +62,7 @@
     title, 
     message, 
     createdOn, 
+    relatedTo<sub>FK</sub>,
     createdBy<sub>FK</sub>)
 
 **Subscription**(
