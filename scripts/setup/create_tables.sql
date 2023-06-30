@@ -42,15 +42,15 @@ CREATE TABLE Condition (
 
 CREATE TABLE Product (
     productId INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(255),
-    description TEXT,
-    price DECIMAL(10, 2),
-    availableQuantity INT,
-    published BOOLEAN,
-    link VARCHAR(255),
+    name VARCHAR(255) NOT NULL,
+    description TEXT NOT NULL,
+    price DECIMAL(10, 2) NOT NULL,
+    availableQuantity INT NOT NULL,
+    published BOOLEAN NOT NULL,
+    link VARCHAR(255) NOT NULL,
     createdOn DATETIME DEFAULT GETDATE(),
-    conditionId INT,
-    createdBy INT,
+    conditionId INT NOT NULL,
+    createdBy INT NOT NULL,
     FOREIGN KEY (conditionId) 
         REFERENCES Condition(conditionId),
     FOREIGN KEY (createdBy)
