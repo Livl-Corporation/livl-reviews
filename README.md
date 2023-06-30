@@ -1,7 +1,17 @@
-# Livl Reviews
+<h1 align="center"><img src="img/Livl_Reviews.png" width="224px"/><br/>  
+   Livl Review 
+</h1>  
+<p align="center">Modélisation d'une base de données pour une platforme de test de produits.</p>  
 
-> Cahier des charges
->
+# **📖 Table des matières**
+
+- [**📚 Cahier des charges**](#📚-cahier-des-charges)
+    - [**💡 Contexte**](#💡-contexte)
+    - [**⭐ Objectifs**](#⭐-objectifs)
+    - [**🧾 Scénarios**](#🧾-scénarios)
+    - [**🔢 Estimation**](#🔢-estimation-de-la-taille-des-données)
+
+# 📚 Cahier des charges
 
 ## 💡 Contexte
 
@@ -41,7 +51,7 @@ Il réceptionne les demandes de tests soumises par les testeurs et peut étudier
 
 Enfin, il reçoit les avis rédigés par les testeurs et peut clôturer le test.
 
-## Scénarios
+## 🧾 Scénarios
 
 1. Assis sur sa chaise de bureau verte, José, travaillant comme agent de tests pour une éminente boutique en ligne de stylos, est interrompu par la voix de son collaborateur qui l’informe qu’il cherche a obtenir des avis clients sur le dernier modèle de stylo de son entreprise. José pris la situation en main et publia une offre de test sur sa plateforme de tests de produit préféré : Livl Reviews ©.
 2. José, soucieux de trouver rapidement un testeur pour son dernier modèle de stylo, décide d’inviter un testeur dont il a obtenu l’email via un confrère à accéder à son catalogue de produit à tester. Il se rend sur la plateforme, entre l’adresse email du testeur et fait partir l’invitation.
@@ -75,7 +85,7 @@ Enfin, il reçoit les avis rédigés par les testeurs et peut clôturer le test.
 
 9. Alors qu’il était en train de discuter avec son collègue, un email attire l’attention de José. Il l’ouvre et clique sur le lien qui le redirige vers Livl Reviews ©. C’est le commentaire de Bilou pour son dernier modèle de stylo qui est arrivé ! Il démarre la lecture du commentaire et est rapidement séduit par la plume du passioné de littérature. Lorsqu’il eu finit la lecture, il eu du mal a émerger et resta bouche bée quelques secondes. Il s’empressa de valider le test de Bilou et se dit qu’à l’avenir, il aimerai bien collaborer avec lui de temps à autres …
 
-## Estimation de la taille des données
+## **🔢 Estimation de la taille des données**
 
 - milliers de produits
 - centaines d’agents
