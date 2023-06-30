@@ -100,6 +100,6 @@ Afin de pouvoir associer des médias à un produit et une critique, nous avons b
 
 ## **Scripts de scénarios**
 
-Selon les neufs scénarios que nous avons [écrits dans la cachier des charges](README.md), nous avons créé des scripts pour les exécuter.
+Selon les neufs scénarios que nous avons [écrits dans le cachier des charges](README.md), nous avons créé des scripts pour les exécuter.
 
 > [Les scripts de scénarios sont disponibles ici.](scripts/scenarios/)
