@@ -1,6 +1,4 @@
-<h1 align="center"><img src="img/Livl_Reviews.png" width="224px"/><br/>  
-   Livl Review 
-</h1>  
+<h1 align="center"><img src="img/Livl_Reviews.png" width="224px"/><br/></h1>  
 <p align="center">Modélisation d'une base de données pour une platforme de test de produits.</p>  
 
 # **📖 Table des matières**

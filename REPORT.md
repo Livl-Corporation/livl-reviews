@@ -1,5 +1,5 @@
-<h1 align="center"><img src="img/Livl_Reviews.png" width="224px"/><br/> 
-  Report - Livl Review 
+<h1 align="center"><img src="img/Livl_Reviews.png" width="224px"/><br/>
+Rapport de conception
 </h1>  
 <p align="center">Veuillez trouver notre rapport concernant nos choix de conception et nos différents scripts nécessaires au bon fonctionnement de notre base de données.</p>  
 
@@ -72,7 +72,7 @@
 
 > [Les scripts de triggers sont disponibles ici.](scripts/triggers/)
 
-- On crée un trigger que le produit qu'on essaye de demander en créant une `REQUEST` est disponible en regardant si les tests en cours sur ce produit est possible. Si ce n'est pas le cas, on ne peut pas créer la `REQUEST`.
+- On crée un trigger que le produit qu'on essaye de demander en créant une `REQUEST` est disponible en regardant si les tests en cours sur ce produit est possible. Si ce n'est pas le cas, on ne peut pas créer la `REQUEST`. Le script est disponible dans le fichier `check_product_available.sql`.
 
 ## **Procédures stockées**
 
