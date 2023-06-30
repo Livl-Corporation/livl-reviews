@@ -1,7 +1,7 @@
 <h1 align="center"><img src="img/Livl_Reviews.png" width="224px"/><br/>
 Rapport de conception
 </h1>  
-<p align="center">Veuillez trouver notre rapport concernant nos choix de conception et nos différents scripts nécessaires au bon fonctionnement de notre base de données.</p>  
+<p align="center">Vous trouverez ici notre rapport sur nos choix de conception et les différents scripts nécessaires au bon fonctionnement de notre base de données.</p>  
 
 ## **📖 Table des matières**
 
@@ -64,7 +64,7 @@ Rapport de conception
 
 ## **Insertion des données** 
 
-> [Le script d'insertion de données est disponible ici.](scripts/setup/insert_tables.sql)
+> [Le script d'insertion de données est disponible ici.](scripts/setup/insert_data.sql)
 
 - Nous avons crée un script d'insertion de quelques données afin d'avoir une base de données avec des données de test.
 

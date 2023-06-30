@@ -1,13 +1,27 @@
 <h1 align="center"><img src="img/Livl_Reviews.png" width="224px"/><br/></h1>  
-<p align="center">Modélisation d'une base de données pour une platforme de test de produits.</p>  
+<p align="center">Modélisation d'une base de données pour une plateforme de test de produits.</p>  
 
 # **📖 Table des matières**
 
+- [**⚠️ Instructions**](#⚠️-instructions)
 - [**📚 Cahier des charges**](#📚-cahier-des-charges)
     - [**💡 Contexte**](#💡-contexte)
     - [**⭐ Objectifs**](#⭐-objectifs)
     - [**🧾 Scénarios**](#🧾-scénarios)
     - [**🔢 Estimation**](#🔢-estimation-de-la-taille-des-données)
+
+# ⚠️ Instructions
+
+Pour assurer le bon fonctionnement de la plateforme **Livl Review**, nous vous recommandons d'exécuter les scripts suivants avec l'interface de ligne de commande MySQL pour créer la base de données, insérer des données et créer des procédures et des triggers :
+
+1. [`setup/create_tables.sql`](setup/create_tables.sql)
+    
+    *Ce premier script créé automatiquement une table LivlReview dans laquelle sera exécuté tout les scripts suivants.*
+    
+2. [`setup/insert_data.sql`](setup/insert_data.sql)
+3. [`procedures/create_product.sql`](procedures/create_product.sql)
+4. [`procedures/create_review.sql`](procedures/create_review.sql)
+5. [`triggers/check_product_availability.sql`](triggers/check_product_availability.sql)
 
 # 📚 Cahier des charges
 
