@@ -3,7 +3,7 @@ CREATE DATABASE LivlReview;
 USE LivlReview;
 
 CREATE TABLE User (
-    userId INT PRIMARY KEY,
+    userId INT AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(255),
     email VARCHAR(255),
     password VARCHAR(255),
@@ -14,17 +14,22 @@ CREATE TABLE User (
 );
 
 CREATE TABLE Invitation (
-    invitationId INT PRIMARY KEY,
+    invitationId INT AUTO_INCREMENT PRIMARY KEY,
     createdOn DATETIME,
     message TEXT,
-    sender INT,
-    recipient INT,
-    FOREIGN KEY (sender) REFERENCES User(userId),
-    FOREIGN KEY (recipient) REFERENCES User(userId)
+    createdBy INT,
+    email VARCHAR(255),
 );
 
+ALTER TABLE Invitation
+ADD CONSTRAINT fk_invitation_sender
+FOREIGN KEY (createdBy)
+REFERENCES User(userId)
+CHECK (role = 'agent')
+ON DELETE CASCADE;
+
 CREATE TABLE Condition (
-    conditionId INT PRIMARY KEY,
+    conditionId INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255),
     refundRate FLOAT,
     refundMode VARCHAR(255),
@@ -32,11 +37,17 @@ CREATE TABLE Condition (
     requirePictures BOOLEAN,
     requireVideos BOOLEAN,
     createdBy INT,
-    FOREIGN KEY (createdBy) REFERENCES User(userId)
 );
 
+ALTER TABLE Condition
+ADD CONSTRAINT fk_condition_createdBy
+FOREIGN KEY (createdBy)
+REFERENCES User(userId)
+CHECK (role = 'agent')
+ON DELETE CASCADE;
+
 CREATE TABLE Product (
-    productId INT PRIMARY KEY,
+    productId INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255),
     description TEXT,
     price DECIMAL(10, 2),
@@ -47,52 +58,70 @@ CREATE TABLE Product (
     conditionId INT,
     createdBy INT,
     FOREIGN KEY (conditionId) REFERENCES Condition(conditionId),
-    FOREIGN KEY (createdBy) REFERENCES User(userId)
 );
 
+ALTER TABLE Product
+ADD CONSTRAINT fk_product_createdBy
+FOREIGN KEY (createdBy)
+REFERENCES User(userId)
+CHECK (role = 'agent')
+ON DELETE CASCADE;
+
 CREATE TABLE Request (
-    requestId INT PRIMARY KEY,
+    requestId INT AUTO_INCREMENT PRIMARY KEY,
     createdOn DATETIME,
     createdBy INT,
     recipient INT,
     productId INT,
-    FOREIGN KEY (createdBy) REFERENCES User(userId),
-    FOREIGN KEY (recipient) REFERENCES User(userId),
     FOREIGN KEY (productId) REFERENCES Product(productId)
 );
 
+ALTER TABLE Request
+ADD CONSTRAINT fk_request_recipient
+FOREIGN KEY (recipient)
+REFERENCES User(userId)
+CHECK (role = 'agent');
+
 CREATE TABLE RequestEvent (
-    eventId INT PRIMARY KEY,
+    eventId INT AUTO_INCREMENT PRIMARY KEY,
     message TEXT,
     state VARCHAR(255),
     createdOn DATETIME,
     requestId INT,
+    createdBy INT,
+    FOREIGN KEY (createdBy) REFERENCES User(userId)
     FOREIGN KEY (requestId) REFERENCES Request(requestId)
 );
 
 CREATE TABLE Review (
-    reviewId INT PRIMARY KEY,
+    reviewId INT AUTO_INCREMENT PRIMARY KEY,
     note INT,
     title VARCHAR(255),
     message TEXT,
     createdOn DATETIME,
     createdBy INT,
-    FOREIGN KEY (createdBy) REFERENCES User(userId)
+    relatedTo INT
+    FOREIGN KEY (relatedTo) REFERENCES Request(requestId)
 );
 
 CREATE TABLE Subscription (
-    subscriptionId INT PRIMARY KEY,
+    subscriptionId AUTO_INCREMENT INT PRIMARY KEY,
     active BOOLEAN,
     disabledOn DATETIME,
     createdOn DATETIME,
     follower INT,
     following INT,
-    FOREIGN KEY (follower) REFERENCES User(userId),
-    FOREIGN KEY (following) REFERENCES User(userId)
 );
 
+ALTER TABLE Subscription
+ADD CONSTRAINT fk_subscription_following
+FOREIGN KEY (following)
+REFERENCES User(userId)
+CHECK (role = 'agent')
+ON DELETE CASCADE;
+
 CREATE TABLE Media (
-    mediaId INT PRIMARY KEY,
+    mediaId INT AUTO_INCREMENT PRIMARY KEY,
     caption TEXT,
     url VARCHAR(255)
 );
