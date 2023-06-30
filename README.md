@@ -16,7 +16,7 @@ Pour assurer le bon fonctionnement de la plateforme **Livl Review**, nous vous r
 
 1. [`setup/create_tables.sql`](setup/create_tables.sql)
     
-    *Ce premier script créé automatiquement une table LivlReview dans laquelle sera exécuté tout les scripts suivants.*
+    *Ce premier script créé automatiquement une base de données LivlReview dans laquelle sera exécuté tout les scripts suivants.*
     
 2. [`setup/insert_data.sql`](setup/insert_data.sql)
 3. [`procedures/create_product.sql`](procedures/create_product.sql)
@@ -54,6 +54,8 @@ Lorsqu’une demande est acceptée, il doit avoir accès à une page lui permett
 Enfin, il doit pouvoir consulter l’historiques des produits qu’il a testé.
 
 ### Faciliter le travail de l’agent
+
+L'agent doit pouvoir inviter des testeurs à rejoindre la plateforme via un email. Les testeurs qu'il a invité auront accès à son catalogue.
 
 L’agent doit pouvoir gérer les produits disponibles en test. Pour chaque produit, il y ajoute son nom, sa description, son prix initiale, des photos ainsi que la quantité mise à disposition en test.
 
