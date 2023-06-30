@@ -30,3 +30,15 @@ Relations :
 
 ### **Logical diagram**
 
+
+# **📚Database**
+
+### Creation of tables 
+
+- We created constraints for few tables : 
+    - To create a `Product`, a `Condition`, to send an `Invitation` or to receive a `Request` you  will need to have the role `agent`. 
+
+### Creation of triggers
+
+- We created a trigger to delete any data linked to the `User` when we delete it.
+

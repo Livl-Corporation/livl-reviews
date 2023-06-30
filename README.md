@@ -66,14 +66,14 @@ Enfin, il reçoit les avis rédigés par les testeurs et peut clôturer le test.
 
     “Et si c’était une farce !?”, se dit-il.
 
-    Bilou ne pouvais pas rester plus longtemps sans réponse à cette question. Il plie bagage et rentra chez lui en quatrième vitesse afin de se connecter à la plateforme de test. Il se rend sur son compte et s’exclame d’un cri de joie. Le stylo de ses rêves était bel et bien en route vers son domicile !
+    Bilou ne pouvais pas rester plus longtemps sans réponse à cette question. Il plie bagage et rentra chez lui en quatrième vitesse afin de se connecter à la plateforme de test. Il se rend sur son compte et s’exclame d’un cri de joie. Le stylo de ses rêves était bel et bien en route vers son domicile ! Dans un élan de bonté, il brandit son clavier pour envoyer un petit message de remerciement au dénomé "José" ayant accepté sa demande.
 
-8. Lundi matin, 8h30. Pour bien préparer sa semaine et se remettre dans le bain, José se connecte sur sa plateforme de test favori. Il regarde l’état de ses tests en cours et constate qu’il a reçu deux demandes de tests mais pas de nouveaux commentaires publiés par les testeurs. Maintenant au jus de l’avancement de ces derniers, la semaine de José peut commencer !
-9. Mardi 20 juin, 16h. Pour le commun des mortels, c’est un mardi après midi bien banal. Ce n’est pas le cas pour Bilou. En effet, il a reçu hier un message du livreur lui indiquant la livraison du stylo pour lequel il a été sélectionné comme testeur. Bilou ne tient plus en place… Les minutes sont des heures et les secondes sont des minutes… Tout à coup, la sonnette retenti. Illico presto, Bilou accueille le facteur d’un pas décidé et déballe son stylo.
+
+8. Mardi 20 juin, 16h. Pour le commun des mortels, c’est un mardi après midi bien banal. Ce n’est pas le cas pour Bilou. En effet, il a reçu hier un message du livreur lui indiquant la livraison du stylo pour lequel il a été sélectionné comme testeur. Bilou ne tient plus en place… Les minutes sont des heures et les secondes sont des minutes… Tout à coup, la sonnette retenti. Illico presto, Bilou accueille le facteur d’un pas décidé et déballe son stylo.
 
     Une semaine plus tard, fièrement équipé de son nouveau stylo qui est désormais devenu son plus fidèle compagnon, Bilou achève le dernier caractère de son nouveau livre. Quelle réussite ! Il s’empresse de se connecter sur la plateforme de test pour chanter les louanges de cet outil dont il est désormais inséparable. Quelques lignes plus tard, son commentaire est soumis et est en attente de validation.
 
-10. Alors qu’il était en train de discuter avec son collègue, un email attire l’attention de José. Il l’ouvre et clique sur le lien qui le redirige vers Livl Reviews ©. C’est le commentaire de Bilou pour son dernier modèle de stylo qui est arrivé ! Il démarre la lecture du commentaire et est rapidement séduit par la plume du passioné de littérature. Lorsqu’il eu finit la lecture, il eu du mal a émerger et resta bouche bée quelques secondes. Il s’empressa de valider le test de Bilou et se dit qu’à l’avenir, il aimerai bien collaborer avec lui de temps à autres …
+9. Alors qu’il était en train de discuter avec son collègue, un email attire l’attention de José. Il l’ouvre et clique sur le lien qui le redirige vers Livl Reviews ©. C’est le commentaire de Bilou pour son dernier modèle de stylo qui est arrivé ! Il démarre la lecture du commentaire et est rapidement séduit par la plume du passioné de littérature. Lorsqu’il eu finit la lecture, il eu du mal a émerger et resta bouche bée quelques secondes. Il s’empressa de valider le test de Bilou et se dit qu’à l’avenir, il aimerai bien collaborer avec lui de temps à autres …
 
 ## Estimation de la taille des données
 
